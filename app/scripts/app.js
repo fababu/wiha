@@ -25,6 +25,10 @@ angular.module('wihaApp', [
         controller: 'SettingsCtrl',
         authenticate: true
       })
+      .when('/wishes', {
+        templateUrl: 'partials/wishes',
+        controller: 'WishesCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -4,10 +4,16 @@ angular.module('wihaApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',
-      'link': '/'
+      'link': '/',
+      'needLogin': false
+    }, {
+      'title': 'Wishes',
+      'link': '/wishes',
+      'needLogin': true
     }, {
       'title': 'Settings',
-      'link': '/settings'
+      'link': '/settings',
+      'needLogin': true
     }];
     
     $scope.logout = function() {

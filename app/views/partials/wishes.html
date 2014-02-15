@@ -1,0 +1,26 @@
+<div ng-include="'partials/navbar'"></div>
+
+<div class="row wishes">
+  <form role="form" ng-submit="makeAWish()">
+    <div class="form-group">
+      <label for="new-wish">I Wish I Had A...</label>
+      <div class="input-group">
+        <input name="new-wish" class="form-control input-lg" ng-model="newWish" placeholder="Make a Wish!">
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-success btn-lg">Submit</button>
+        </span>
+      </div>
+    </div>
+  </form>
+</div>
+<hr />
+<div class="row wishes">
+  Your wishes so far:
+  <div ng-repeat="wish in wishes">
+    <h3>{{wish.text}}</h3>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Yepp</p>
+</div>
