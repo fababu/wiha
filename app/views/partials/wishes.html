@@ -3,7 +3,12 @@
 <div class="row wishes">
   Your wishes so far:
   <div ng-repeat="wish in wishes">
-    <div class="wish">{{wish.text}}<button ng-click="deleteAWish(wish._id)" type="button" class="close" aria-hidden="true">&times;</button></div>
+    <div class="wish">
+      <span>{{wish.text}}</span>
+      <div class="btn-group btn-group-sm wish-button-group">
+        <button ng-click="deleteAWish(wish._id)" type="button" class="close" aria-hidden="true">&times;</button>
+      </div>
+    </div>
   </div>
   <form role="form" ng-submit="makeAWish()">
     <div class="form-group">

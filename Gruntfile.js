@@ -54,6 +54,7 @@ module.exports = function (grunt) {
         options: {
           paths: [
             "<%= yeoman.app %>/styles/bootstrap",
+            "<%= yeoman.app %>/styles/wiha",
             "<%= yeoman.app %>/bower_components/bootstrap/less"
           ]
         }
