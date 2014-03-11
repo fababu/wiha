@@ -2098,8 +2098,8 @@ fieldset[disabled] .btn-danger.active {
 }
 .btn-success {
   color: #ffffff;
-  background-color: #123456;
-  border-color: #0e2741;
+  background-color: #628739;
+  border-color: #557531;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -2107,8 +2107,8 @@ fieldset[disabled] .btn-danger.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   color: #ffffff;
-  background-color: #0b2034;
-  border-color: #03090e;
+  background-color: #4d6a2d;
+  border-color: #364a1f;
 }
 .btn-success:active,
 .btn-success.active,
@@ -2130,11 +2130,11 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #123456;
-  border-color: #0e2741;
+  background-color: #628739;
+  border-color: #557531;
 }
 .btn-success .badge {
-  color: #123456;
+  color: #628739;
   background-color: #fff;
 }
 .btn-info {
@@ -2266,8 +2266,8 @@ input[type="button"].btn-block {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+  src: url('../../fonts/glyphicons-halflings-regular.eot');
+  src: url('../../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -4271,11 +4271,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
   background-color: #3071a9;
 }
 .label-success {
-  background-color: #123456;
+  background-color: #628739;
 }
 .label-success[href]:hover,
 .label-success[href]:focus {
-  background-color: #091a2c;
+  background-color: #48632a;
 }
 .label-info {
   background-color: #5bc0de;
@@ -4520,7 +4520,7 @@ a.thumbnail.active {
   animation: progress-bar-stripes 2s linear infinite;
 }
 .progress-bar-success {
-  background-color: #123456;
+  background-color: #628739;
 }
 .progress-striped .progress-bar-success {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -5953,4 +5953,18 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+}
+.glyphicon {
+  font-size: 14px;
+  float: right;
+}
+.close {
+  font-size: 35px;
+  text-shadow: none;
+  opacity: 0.5;
+}
+.close:hover,
+.close:focus {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
 }
