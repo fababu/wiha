@@ -1,14 +1,3 @@
-.close {
-  font-size: (@font-size-base * 2.5);
-  text-shadow: none;
-  opacity: 0.5;
-}
-
-.close:hover,
-.close:focus {
-  .opacity(.8);
-}
-
 .wish {
   background-color: #660066;
   color: #CC66CC;
@@ -21,4 +10,22 @@
 
 .wish-button-group {
   float: right;
+  font-size: (@font-size-base * 1.5);
+}
+
+.wish-button {
+  color: @close-color;
+  font-size: (@font-size-base * 1.5);
+  font-weight: @close-font-weight;
+  line-height: inherit;
+  opacity: 0.5;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.wish-button:hover,
+.wish-button:focus {
+  color: @close-color;
+  text-decoration: none;
+  .opacity(.8);
 }
