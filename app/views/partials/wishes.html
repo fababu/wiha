@@ -6,8 +6,12 @@
     <div class="wish">
       <span>{{wish.text}}</span>
       <div class="btn-group btn-group-sm wish-button-group">
-        <button ng-click="deleteAWish(wish._id)" type="button" class="wish-button glyphicon btn-link" aria-hidden="true">&#xe014;</button>
-        <button ng-click="changeColor(wish._id)" type="button" class="wish-button glyphicon btn-link" aria-hidden="true">&#xe010;</button>
+        <button ng-click="deleteAWish(wish._id)" type="button" class="btn btn-link" aria-hidden="true">
+          <span class="glyphicon glyphicon-remove"></span>
+        </button>
+        <button ng-click="changeColor(wish._id)" type="button" class="wish-button btn btn-link" aria-hidden="true">
+          <span class="glyphicon glyphicon-th-large"></span>
+        </button>
       </div>
     </div>
   </div>

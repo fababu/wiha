@@ -49,6 +49,7 @@ module.exports = function (grunt) {
     less: {
       development: {
         files: {
+          "<%= yeoman.app %>/styles/wiha/wish.css": "<%= yeoman.app %>/styles/wiha/wish.less",
           "<%= yeoman.app %>/styles/bootstrap/bootstrap.css": "<%= yeoman.app %>/styles/bootstrap/bootstrap.less"
         },
         options: {
@@ -76,7 +77,7 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
-      bootstrap: {
+      lessStyles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
         tasks: ['less']
       },
