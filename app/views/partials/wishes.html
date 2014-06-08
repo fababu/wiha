@@ -1,9 +1,22 @@
 <div ng-include="'partials/navbar'"></div>
 
 <div class="row wishes">
+  Your wishes so far:
+  <div ng-repeat="wish in wishes">
+    <div class="wish">
+      <span>{{wish.text}}</span>
+      <div class="btn-group btn-group-sm wish-button-group">
+        <button ng-click="deleteAWish(wish._id)" type="button" class="btn btn-link" aria-hidden="true">
+          <span class="glyphicon glyphicon-remove"></span>
+        </button>
+        <button ng-click="changeColor(wish._id)" type="button" class="wish-button btn btn-link" aria-hidden="true">
+          <span class="glyphicon glyphicon-th-large"></span>
+        </button>
+      </div>
+    </div>
+  </div>
   <form role="form" ng-submit="makeAWish()">
     <div class="form-group">
-      <label for="new-wish">I Wish I Had A...</label>
       <div class="input-group">
         <input name="new-wish" class="form-control input-lg" ng-model="newWish" placeholder="Make a Wish!">
         <span class="input-group-btn">
@@ -12,13 +25,6 @@
       </div>
     </div>
   </form>
-</div>
-<hr />
-<div class="row wishes">
-  Your wishes so far:
-  <div ng-repeat="wish in wishes">
-    <h3>{{wish.text}}</h3>
-  </div>
 </div>
 
 <div class="footer">

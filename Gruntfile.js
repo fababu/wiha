@@ -46,6 +46,21 @@ module.exports = function (grunt) {
         url: 'http://localhost:<%= express.options.port %>'
       }
     },
+    less: {
+      development: {
+        files: {
+          "<%= yeoman.app %>/styles/wiha/wish.css": "<%= yeoman.app %>/styles/wiha/wish.less",
+          "<%= yeoman.app %>/styles/bootstrap/bootstrap.css": "<%= yeoman.app %>/styles/bootstrap/bootstrap.less"
+        },
+        options: {
+          paths: [
+            "<%= yeoman.app %>/styles/bootstrap",
+            "<%= yeoman.app %>/styles/wiha",
+            "<%= yeoman.app %>/bower_components/bootstrap/less"
+          ]
+        }
+      }
+    },
     watch: {
       js: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
@@ -61,6 +76,10 @@ module.exports = function (grunt) {
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
+      },
+      lessStyles: {
+        files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
+        tasks: ['less']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -158,7 +177,8 @@ module.exports = function (grunt) {
     'bower-install': {
       app: {
         html: '<%= yeoman.app %>/views/index.html',
-        ignorePath: '<%= yeoman.app %>/'
+        ignorePath: '<%= yeoman.app %>/',
+        exclude: [/bootstrap\.css/]
       }
     },
 
